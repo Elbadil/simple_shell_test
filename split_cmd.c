@@ -7,7 +7,7 @@
 char **split_cmd(char *str)
 {
 	char **argv;
-	char *delim = " \t\n";
+	char *delim = " \t\r\n";
 	char *string;
 	int j = 0;
 
