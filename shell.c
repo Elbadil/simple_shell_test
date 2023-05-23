@@ -24,7 +24,8 @@ int main(int ac, char **av, char **env)
 		if (new_line == -1)
 		{
 			free(line);
-			exit(EXIT_FAILURE);
+			write(STDOUT_FILENO, "EOF\n", 4);
+			exit(EXIT_SUCCESS);
 		}
 		/* Checking if the line is empty (spaces, tabs, newlines)*/
 		if (empty_line(line))
