@@ -16,7 +16,7 @@ char *file_path(char *filename)
 	if (stat(filename, &file_status) == 0)
 	{
 		free(path_env_copy);
-		return (filename);
+		return (_strdup(filename));
 	}
 	string = strtok(path_env_copy, delim);
 	while (string != NULL)
