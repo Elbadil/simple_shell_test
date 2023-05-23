@@ -13,6 +13,8 @@ char *file_path(char *filename)
 	char *full_path;
 	struct stat file_status;
 
+	if (path_env == NULL || path_env_copy == NULL || filename == NULL)
+		return (NULL);
 	if (stat(filename, &file_status) == 0)
 	{
 		free(path_env_copy);
