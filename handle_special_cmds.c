@@ -7,11 +7,13 @@
 */
 int handle_special_cmds(char **av, char *line)
 {
+	int status = 0;
+
 	if (_strcmp(av[0], "exit") == 0)
 	{
 		free(av);
 		free(line);
-		exit(0);
+		exit(&status);
 	}
 
 	if (_strcmp(av[0], "env") == 0)
