@@ -13,11 +13,11 @@
 /* Functions */
 char *file_path(char *filename);
 char **split_cmd(char *str);
-void print_environ();
+void print_environ(void);
 int empty_line(char *line);
 int handle_special_cmds(char **av, char *line);
 void fork_execute(char *usr_cmd, char **av, char **env);
-extern char** environ;
+extern char **environ;
 
 /* Utils */
 char *_getenv(const char *name);
