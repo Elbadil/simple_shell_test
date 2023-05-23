@@ -13,7 +13,7 @@ int handle_special_cmds(char **av, char *line)
 	{
 		free(av);
 		free(line);
-		exit(&status);
+		exit(status);
 	}
 
 	if (_strcmp(av[0], "env") == 0)
