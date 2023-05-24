@@ -17,7 +17,7 @@ void fork_execute(char *usr_cmd, char **av, char **env)
 	{
 		perror("Fork failed");
 		free(av);
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	}
 	if (prg_pid == 0)
 	{
