@@ -29,6 +29,5 @@ int _strcmp(const char *s1, const char *s2);
 char *_strcat(char *dest, char *src);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strdup(char *str);
-int _atoi(char *s);
 
 #endif

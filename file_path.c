@@ -41,6 +41,7 @@ char *file_path(char *filename)
 			free(full_path);
 			string = strtok(NULL, delim);
 		}
+	}
 	free(path_env_copy);
 	return (NULL);
 }
