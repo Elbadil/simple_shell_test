@@ -11,11 +11,10 @@ char *file_path(char *filename)
 	char *string;
 	char *delim = ":";
 	char *full_path;
-	struct stat file_status;
 
 	if (path_env == NULL || path_env_copy == NULL || filename == NULL)
 		return (NULL);
-	if (stat(filename, &file_status) == 0)
+	if (access(filename, F_OK) == 0)
 	{
 		free(path_env_copy);
 		return (_strdup(filename));
@@ -32,7 +31,7 @@ char *file_path(char *filename)
 		_strcpy(full_path, string);
 		_strcat(full_path, "/");
 		_strcat(full_path, filename);
-		if (stat(full_path, &file_status) == 0)
+		if (access(full_path, F_OK) == 0)
 		{
 			free(path_env_copy);
 			return (full_path);
