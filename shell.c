@@ -9,7 +9,7 @@
 int main(int ac, char **av, char **env)
 {
 	char *line = NULL, *usr_cmd;
-	const char *no_file = "./shell: No such file or directory\n";
+	const char *no_file = "sh: 1: ./RUNME: not found";
 	size_t line_size = 0;
 	ssize_t new_line;
 	(void)ac;
